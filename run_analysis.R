@@ -33,7 +33,7 @@ names(test_y) = c("Activity_ID", "Activity_Label")
 names(test_subject) = "Subject"
 
 # Bind data
-install.packages("data.table")
+#install.packages("data.table")
 library(data.table)
 test_data <- cbind(as.data.table(test_subject), test_y, test_x)
 
@@ -60,7 +60,8 @@ data = rbind(test_data, train_data, fill=TRUE)
 
 id_labels   = c("Subject", "Activity_ID", "Activity_Label")
 data_labels = setdiff(colnames(data), id_labels)
-install.packages("reshape"); library(reshape)
+#install.packages("reshape"); 
+library(reshape)
 
 #melting data so that each row is a unique id-variable combination.
  
